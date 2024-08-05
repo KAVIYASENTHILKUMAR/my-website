@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AK Design and Build - Innovative Construction Solutions">
+    <title>AK Design and Build</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="yellow logo.png" alt="AK Design and Build Logo">
+            </div>
+            <ul>
+                <li class="active"><a href="#header-section">Home</a></li>
+                <li><a href="#who-are-we">About Us</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </div>
+        <div class="title" id="header-section">
+            <h1>AK DESIGN & BUILD</h1>
+        </div>
+        <div class="button">
+            <a href="#" class="btn">We turn your vision into reality.</a>
+        </div>
+    </header>
+
+    <div class="container" id="who-are-we">
+        <h1>Who Are We</h1>
+        <div class="content">
+            <div class="text">
+                <p>Welcome to AK Design and Build, where innovation meets craftsmanship. As a forward-thinking construction startup, we create spaces that blend functionality, sustainability, and aesthetic appeal. We deliver high-quality, innovative building solutions that exceed expectations and contribute to a greener future.
+
+                    Our mission is to provide exceptional, tailored construction services, building long-lasting relationships through transparency, integrity, and excellence. 
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="construction enginerering.jpg" alt="Construction Engineering">
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <h1>Our Works</h1>
+    </div>
+
+    <div class="scroll-container">
+        <button class="scroll-button left">&#9664;</button>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="model 1.png" alt="Model 1">
+            </div>
+            <div class="image-item">
+                <img src="model 2.png" alt="Model 2">
+            </div>
+            <div class="image-item">
+                <img src="model 3.png" alt="Model 3">
+            </div>
+            <div class="image-item">
+                <img src="model 4.png" alt="Model 4">
+            </div>
+            <div class="image-item">
+                <img src="model 5.png" alt="Model 5">
+            </div>
+            <div class="image-item">
+                <img src="model 6.png" alt="Model 6">
+            </div>
+            <div class="image-item">
+                <img src="model 7.png" alt="Model 7">
+            </div>
+            <div class="image-item">
+                <img src="model 8.png" alt="Model 8">
+            </div>
+        </div>
+        <button class="scroll-button right">&#9654;</button>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.image-container').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                prevArrow: '.scroll-button.left',
+                nextArrow: '.scroll-button.right',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <div class="sector">
+        <h1>Our Services</h1>
+        <div class="sector-content">
+            <div class="sector-text">
+                <p>Choosing AK Design and Build means choosing a partner dedicated to quality, reliability, and client satisfaction. We take pride in our collaborative approach, working closely with clients to understand their needs and deliver bespoke solutions.</p>
+                <p>Join us on this journey to build a better future, </p>
+                <ul>
+                    <li>Architectural Design</li>
+                    <li>Renovations and Remodeling</li>
+                    <li>Custom Builds</li>
+                </ul>
+            </div>
+            <div class="image-item">
+                <img src="bluehouse.jpg" alt="Floor Plan">
+            </div>
+        </div>
+    </div>
+
+    <div class="event">
+        <h1>Meticulous Design Planning</h1>
+    </div>
+    <div class="event-content">
+        <div class="event-text">
+            <p>At AK Design and Build, meticulous planning is the cornerstone of our success. Our commitment to professionalism ensures that every project begins with a comprehensive and well-thought-out plan, tailored to meet the unique needs of our clients. Our floor plans reflect our dedication to precision and attention to detail. From initial sketches to finalized blueprints, we meticulously craft each plan to ensure functionality, efficiency, and aesthetic harmony. Our professional planning minimizes disruptions and guarantees a smooth transition from design to reality.</p>
+        </div>
+        <div class="image-item">
+            <img src="floor-plan.jpg" alt="Floor Plan">
+        </div>
+    </div>
+    <div class="image-content">
+        <h1>Some Of Our Plan Works</h1>
+    </div>
+    <div class="scroll-container">
+        <button class="scroll-button left">&#9664;</button>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="floor plan 1.jpeg" alt="Floor Plan 1">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 2.jpeg" alt="Floor Plan 2">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 3.jpeg" alt="Floor Plan 3">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 4.jpeg" alt="Floor Plan 4">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 5.jpeg" alt="Floor Plan 5">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 6.jpeg" alt="Floor Plan 6">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 7.jpeg" alt="Floor Plan 7">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 8.jpeg" alt="Floor Plan 8">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 9.jpeg" alt="Floor Plan 9">
+            </div>
+        </div>
+        <button class="scroll-button right">&#9654;</button>
+    </div>
+    <div class="Contact" id="contact-section">
+        <h1>Contact Us</h1>
+        <div class="contact-content">
+            <img src="contact details.jpeg" alt="Contact">
+        </div>
+    </div>
+</body>
+</html>
