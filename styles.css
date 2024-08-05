@@ -1,11 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
 }
 
 header {
@@ -63,6 +68,7 @@ ul li.active a {
     top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .title h1 {
@@ -75,6 +81,7 @@ ul li.active a {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .btn {
@@ -102,32 +109,13 @@ ul li.active a {
 .content, .event-content, .sector-content {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-.text {
+.text, .event-text, .sector-text {
     flex: 1;
-    padding-top: 50px;
-    padding-right: 20px;
-    margin-right: 80px;
-    text-align: justify;
-    font-size: 20px;
-}
-
-.event-text {
-    flex: 1;
-    padding-top: 20px;
-    padding-right: 20px;
-    margin-left: 30px;
-    margin-right: 80px;
-    text-align: justify;
-    font-size: 20px;
-}
-
-.sector-text {
-    flex: 1;
-    padding-top: 20px;
-    padding-right: 20px;
-    margin-right: 110px;
+    padding: 20px;
+    margin: 0 20px;
     text-align: justify;
     font-size: 20px;
 }
@@ -265,7 +253,7 @@ ul li.active a {
 
 .sector-text ul {
     list-style-type: none;
-    padding-left: 100px;
+    padding-left: 0;
     margin-bottom: 0;
 }
 
@@ -277,7 +265,13 @@ ul li.active a {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     ul {
-        margin-right: 10px;
+        float: none;
+        margin: 20px auto;
+        text-align: center;
+    }
+    ul li {
+        display: block;
+        margin-bottom: 10px;
     }
     ul li a {
         padding: 5px 10px;
@@ -291,21 +285,23 @@ ul li.active a {
         font-size: 16px;
     }
     .text, .event-text, .sector-text {
-        margin-right: 10px;
+        margin: 0;
     }
     .scroll-button {
         width: 40px;
         height: 40px;
+        font-size: 1.5em;
     }
     .slick-prev, .slick-next {
         width: 40px;
         height: 40px;
+        font-size: 1.5em;
     }
 }
 
 @media (max-width: 480px) {
     ul {
-        margin-right: 0;
+        margin: 0;
         text-align: center;
     }
     ul li {
@@ -329,15 +325,18 @@ ul li.active a {
     .scroll-button {
         width: 30px;
         height: 30px;
+        font-size: 1.2em;
     }
     .slick-prev, .slick-next {
         width: 30px;
         height: 30px;
+        font-size: 1.2em;
     }
 }
 
 .image-content {
-    margin-left: 50px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .contact-content {
@@ -347,26 +346,11 @@ ul li.active a {
     transition: transform 0.3s, box-shadow 0.3s;
     scroll-snap-align: start;
     height: fit-content;
-    width: 180px;
+    width: 100%;
 }
 
 .contact-content img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: for rounded corners */
-}
-
-/* Additional media query for image content adjustment */
-@media (max-width: 768px) {
-    .contact-content img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-content img {
-        width: 100%;
-        height: auto;
-    }
 }
