@@ -16,7 +16,7 @@ body {
 
 /* Header */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('colour logo.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('miniature');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -53,7 +53,7 @@ ul li a:hover, ul li.active a {
 /* Logo */
 .logo img {
     float: left;
-    width: 250px;
+    width: 150px;
     height: auto;
     animation: pulseBounce 3s infinite ease-in-out;
 }
@@ -141,19 +141,19 @@ ul li a:hover, ul li.active a {
 }
 
 /* Content Layout */
-.content, .event-content, .sector-content, .image-content {
+.content, .event-content, .image-content {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.container h1,.services h1 ,.event h1 ,.sector h1, .provide h1, .contact-section h1{
+.container h1,.services h1 ,.event h1 , .provide h1, .contact-section h1{
     margin-bottom: 40px;
     text-align: left;
     color: #444;
 }
 
-.text, .event-text, .sector-text {
+.text, .event-text {
     flex: 1;
     padding: 20px;
     margin: 0 20px;
@@ -161,10 +161,40 @@ ul li a:hover, ul li.active a {
     font-size: 20px;
 }
 
-.text p, .event-text p, .sector-text p {
+.text p, .event-text p {
     margin-bottom: 20px;
     line-height: 1.6;
 }
+
+.sector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color:burlywood; /* Optional: Change background color */
+}
+
+.sector-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px; /* Optional: Limit width */
+}
+
+.sector-text h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
 
 .provide {
     margin: 50px auto;
@@ -181,10 +211,10 @@ ul li a:hover, ul li.active a {
 }
 
 .card-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-items: center;
 }
 
 .card {
@@ -228,10 +258,10 @@ ul li a:hover, ul li.active a {
     opacity: 0.9;
 }
 
+
 @media screen and (max-width: 768px) {
     .card-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .card {
@@ -239,6 +269,7 @@ ul li a:hover, ul li.active a {
         max-width: 500px;
     }
 }
+
 
 .choice {
     max-width: 1200px;
@@ -304,7 +335,7 @@ h1 {
 
 /* Image Items */
 .image-item {
-    flex: 1;
+    flex: 1; 
     margin: 10px;
     text-align: center;
     max-width: 100%;
@@ -569,15 +600,26 @@ h1 {
 
 .contact-content {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start; /* Align items at the start */
+}
+
+.contact-image {
+    flex: 0 0 auto; /* Prevent the image from shrinking */
+}
+
+.contact-image video {
+    width: 400px;
+    height: 620px; /* Set the height as needed */
+    object-fit: cover; /* Ensures the video covers the set height while maintaining its aspect ratio */
+    object-position: bottom;
+    border-radius: 10px;
+    margin-right: 20px; /* Add space between video and contact details */
 }
 
 .contact-details {
-    flex: 1;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex; /* Change to flex to align contact info and form */
+    flex-direction: row; /* Arrange contact info and form side by side */
+    flex: 1; /* Allow this to take remaining space */
 }
 
 .contact-info {
@@ -585,8 +627,9 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 500px; /* Match the height of the video */
-    font-family: Arial, sans-serif; /* Set font family if needed */
+    width: 400px; /* Set width to keep it consistent */
+    margin-right: 20px; /* Add margin between contact info and form */
+    height: 620px; /* Match the height of the video */
 }
 
 .contact-info h2 {
@@ -598,7 +641,7 @@ h1 {
     text-align: justify;
     font-size: 20px; /* Adjust the size of the paragraph text */
     line-height: 1.5; /* Improve readability */
-    margin: 10px 0; /* Add vertical spacing between paragraphs */
+    margin: 30px 0; /* Add vertical spacing between paragraphs */
 }
 
 .contact-info strong {
@@ -606,13 +649,56 @@ h1 {
     font-size: 25px; /* Adjust the size of strong text */
 }
 
-.contact-image video {
-    width: 400px;
-    height: 500px; /* Set the height as needed */
-    object-fit: cover; /* Ensures the video covers the set height while maintaining its aspect ratio */
-    object-position: bottom;
-    border-radius: 10px;
+.contact-form-section {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1; /* Allow the form section to take remaining space */
 }
+
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0066cc;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #005bb5;
+}
+
 
 
 footer {
