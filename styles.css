@@ -50,6 +50,49 @@ ul li a:hover, ul li.active a {
     color: black;
 }
 
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 20px; /* Adjust based on your header padding/margin */
+    right: 20px; /* Adjust to add space from the right edge */
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .nav-menu.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .nav-menu li {
+        padding: 10px;
+        border-bottom: 1px solid #555; /* Divider */
+    }
+
+    .nav-menu li a {
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+    }
+}
+
 /* Logo */
 .logo img {
     float: left;
@@ -668,7 +711,7 @@ h1 {
 }
 
 .contact-image video {
-    width: 400px;
+    width: 300px;
     height: 620px; /* Set the height as needed */
     object-fit: cover; /* Ensures the video covers the set height while maintaining its aspect ratio */
     object-position: bottom;
