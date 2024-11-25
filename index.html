@@ -16,13 +16,23 @@
             <div class="logo">
                 <img src="blurywood.png" alt="AK Design and Build Logo">
             </div>
-            <ul>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+                <ul class="nav-menu">
                 <li class="active"><a href="#header-section">Home</a></li>
                 <li><a href="#who-are-we">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact-section">Contact Us</a></li>
             </ul>
         </div>
+        <script>
+            // JavaScript to toggle menu visibility
+            function toggleMenu() {
+                const navMenu = document.querySelector(".nav-menu");
+                navMenu.classList.toggle("show"); // Adds or removes the "show" class
+            }
+        </script>
+        
         <div class="title" id="header-section">
             <h1 class="fade-zoom-heading">AK BUILD & DESIGN </h1>
             <h3 class="fade-zoom-heading">Building the future, restoring the past.</h3>
@@ -175,7 +185,7 @@
             <div class="choice-box">
                 <img src="professional worker  building construction.jpg" alt="Expertise" class="choice-image">
                 <h3>Expertise in the Industry</h3>
-                <p>AK Build and Design is backed by a team of professionals with extensive experience in the construction industry. Their deep understanding of modern construction techniques and materials ensures that your project is built to the highest standards.</p>
+                <p>AK Build Design is backed by a team of professionals with extensive experience in the construction industry. Their deep understanding of modern construction techniques and materials ensures that your project is built to the highest standards.</p>
             </div>
             <div class="choice-box">
                 <img src="interior.jpg" alt="Comprehensive Services" class="choice-image">
@@ -185,7 +195,7 @@
             <div class="choice-box">
                 <img src="scale blueprint.jpg" alt="Custom Solutions" class="choice-image">
                 <h3>Custom Solutions</h3>
-                <p>AK Build and Design specializes in tailored solutions that meet the unique needs of each client. Whether it's residential, commercial, or industrial construction, they work closely with you to bring your vision to life, ensuring that every detail is aligned with your expectations.</p>
+                <p>AK Build Design specializes in tailored solutions that meet the unique needs of each client. Whether it's residential, commercial, or industrial construction, they work closely with you to bring your vision to life, ensuring that every detail is aligned with your expectations.</p>
             </div>
             <div class="choice-box">
                 <img src="brick.jpg" alt="Quality and Reliability" class="choice-image">
@@ -195,12 +205,12 @@
             <div class="choice-box">
                 <img src="construction workers.jpg" alt="Client-Centric Approach" class="choice-image">
                 <h3>Client-Centric Approach</h3>
-                <p>Understanding client needs and exceeding their expectations is a core principle at AK Build and Design. They prioritize communication and transparency, keeping you informed and involved at every stage of the project.</p>
+                <p>Understanding client needs and exceeding their expectations is a core principle at AK Build Design. They prioritize communication and transparency, keeping you informed and involved at every stage of the project.</p>
             </div>
             <div class="choice-box">
                 <img src="building.jpg" alt="Innovative Design" class="choice-image">
                 <h3>Innovative Design</h3>
-                <p>With a strong focus on innovative design, AK Build and Design brings creativity and modern aesthetics to every project. Their design team is skilled in creating spaces that are not only functional but also visually appealing.</p>
+                <p>With a strong focus on innovative design, AK Build Design brings creativity and modern aesthetics to every project. Their design team is skilled in creating spaces that are not only functional but also visually appealing.</p>
             </div>
         </div>
     </div>
@@ -327,7 +337,7 @@
     
     <footer>
         <div class="footer-content">
-            <h3>AK BUILD & DESIGN</h3>
+            <h3>AK Build & Design</h3>
             <p>Building the future, restoring the past.</p>
             <ul class="socials">
                 <li><a href="https://www.instagram.com/ak_design_mdu/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
@@ -344,7 +354,7 @@
             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 AK BUILD & DESIGN . All rights reserved.</p>
+            <p>&copy; 2024 AK Build Design. All rights reserved.</p>
         </div>
     </footer>
 </body>
