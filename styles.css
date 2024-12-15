@@ -359,9 +359,17 @@ ul li a:hover, ul li.active a {
 .contact-details {
     display: flex; /* Change to flex to align contact info and form */
     flex-direction: row; /* Arrange contact info and form side by side */
-    flex: 1; /* Allow the form to take up space */
+    justify-content: space-around; /* Distribute space evenly */
+    width: 100%; /* Ensure full width */
+}
+
+.contact-details .contact-info {
+    flex: 1;
+    font-size: 20px;
     padding: 20px;
-    font-size: 18px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for visual appeal */
 }
 
 .contact-form {
