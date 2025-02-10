@@ -3,72 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A well-structured and optimized HTML page">
-    <meta name="keywords" content="HTML, CSS, JavaScript, optimization, SEO">
-    <title>Optimized HTML Page</title>
+    <meta name="description" content="AK Build and Design - Innovative Construction Solutions">
+    <title>AK Design and Build</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>  
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+        <div class="main">
+            <div class="logo">
+                <img src="blurywood.png" alt="AK Design and Build Logo">
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+                <ul class="nav-menu">
+                <li class="active"><a href="#header-section">Home</a></li>
+                <li><a href="#who-are-we">About Us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact-section">Contact Us</a></li>
             </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <h2>Home Section</h2>
-        <p>This is the home section of the webpage.</p>
-    </section>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Learn more about our company and values.</p>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="slider">
-            <div><img src="image1.jpg" alt="Service 1"></div>
-            <div><img src="image2.jpg" alt="Service 2"></div>
-            <div><img src="image3.jpg" alt="Service 3"></div>
         </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 My Website. All Rights Reserved.</p>
-    </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
+        <script>
+            // JavaScript to toggle menu visibility
+            function toggleMenu() {
+                const navMenu = document.querySelector(".nav-menu");
+                navMenu.classList.toggle("show"); // Adds or removes the "show" class
+            }
+        </script>
+        
+        <div class="title" id="header-section">
+            <h1 class="fade-zoom-heading">AK BUILD & DESIGN </h1>
+            <h3 class="fade-zoom-heading">Building the future, restoring the past.</h3>
+        </div>
+    </header>
+
+    <div class="container" id="who-are-we">
+        <h1>Who Are We</h1>
+        <div class="content">
+            <div class="text">
+                <p>Welcome to AK Build & Design, where innovation meets craftsmanship. As a forward-thinking construction startup, we create spaces that blend functionality, sustainability, and aesthetic appeal. We deliver high-quality, innovative building solutions that exceed expectations and contribute to a greener future.
+                    Our mission is to provide exceptional, tailored construction services, building long-lasting relationships through transparency, integrity, and excellence. 
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="construction enginerering.jpg" alt="Construction Engineering">
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <h1>Our Works</h1>
+    </div>
+
+    <div class="scroll-container">
+        <button class="scroll-button left">&#9664;</button>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="model 1.png" alt="Model 1">
+            </div>
+            <div class="image-item">
+                <img src="model 2.png" alt="Model 2">
+            </div>
+            <div class="image-item">
+                <img src="model 3.png" alt="Model 3">
+            </div>
+            <div class="image-item">
+                <img src="model 4.png" alt="Model 4">
+            </div>
+            <div class="image-item">
+                <img src="model 5.png" alt="Model 5">
+            </div>
+            <div class="image-item">
+                <img src="model 6.png" alt="Model 6">
+            </div>
+            <div class="image-item">
+                <img src="model 7.png" alt="Model 7">
+            </div>
+            <div class="image-item">
+                <img src="model 8.png" alt="Model 8">
+            </div>
+        </div>
+        <button class="scroll-button right">&#9654;</button>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
         $(document).ready(function(){
-            $('.slider').slick({
+            $('.image-container').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
                 autoplay: true,
-                dots: true,
-                arrows: false
+                autoplaySpeed: 3000,
+                arrows: true,
+                prevArrow: '.scroll-button.left',
+                nextArrow: '.scroll-button.right',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
         });
     </script>
+
+    <div class="sector">
+        <div class="sector-content">
+            <div class="sector-text">
+                <h1> Construction cost starts at 2,000/- sq.feet </h1>
+            </div>
+            <div class="image-item">
+                <img src="bluehouse.jpg" alt="Floor Plan">
+            </div>
+        </div>
+    </div>
+
+    <div class="provide" id="services">
+        <h1>Services We Provide</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="architecture.jpg" alt="Architectural Design" class="card-img">
+                <div class="card-body">
+                    <h2>Architectural Design</h2>
+                    <p>We create detailed architectural designs that blend aesthetics with functionality.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="renovation.jpg" alt="Renovations and Remodeling" class="card-img">
+                <div class="card-body">
+                    <h2>Renovations and Remodeling</h2>
+                    <p>Transforming spaces through innovative renovations and remodeling solutions.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="custom builds.jpg" alt="Custom Builds" class="card-img">
+                <div class="card-body">
+                    <h2>Custom Builds</h2>
+                    <p>We deliver custom building solutions tailored to your unique needs and vision.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="design-consultancy.jpg" alt="Design and Consultancy" class="card-img">
+                <div class="card-body">
+                    <h2>Design and Consulting</h2>
+                    <p>We offer expert design and consulting services with meticulous attention to detail.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="building construction constructors.jpg" alt="Structural Design" class="card-img">
+                <div class="card-body">
+                    <h2>Structural Design</h2>
+                    <p>We specializes in structural design, ensuring your projects are built on a foundation of strength and stability.</p>
+                </div>
+                </div>
+                <div class="card">
+                    <img src="interior design.jpg" alt="Interior Design" class="card-img">
+                    <div class="card-body">
+                        <h2> Interior Design</h2>
+                        <p>We excel in creating elegant and functional interior designs that transform spaces into personalized, inspiring environments.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="choice">
+        <h1>Why to Choose Us</h1>
+        <div class="choice-container">
+            <div class="choice-box">
+                <img src="professional worker  building construction.jpg" alt="Expertise" class="choice-image">
+                <h3>Expertise in the Industry</h3>
+                <p>AK Build Design is backed by a team of professionals with extensive experience in the construction industry. Their deep understanding of modern construction techniques and materials ensures that your project is built to the highest standards.</p>
+            </div>
+            <div class="choice-box">
+                <img src="interior.jpg" alt="Comprehensive Services" class="choice-image">
+                <h3>Comprehensive Services</h3>
+                <p>We offer a full range of services, from initial design and planning to construction and finishing touches. This end-to-end service means you have a single point of contact for all your project needs, making the process smoother and more efficient.</p>
+            </div>
+            <div class="choice-box">
+                <img src="scale blueprint.jpg" alt="Custom Solutions" class="choice-image">
+                <h3>Custom Solutions</h3>
+                <p>AK Build Design specializes in tailored solutions that meet the unique needs of each client. Whether it's residential, commercial, or industrial construction, they work closely with you to bring your vision to life, ensuring that every detail is aligned with your expectations.</p>
+            </div>
+            <div class="choice-box">
+                <img src="brick.jpg" alt="Quality and Reliability" class="choice-image">
+                <h3>Quality and Reliability</h3>
+                <p>The company is committed to delivering high-quality results on time and within budget. Their reputation for reliability and excellence is a key reason clients choose them for their construction projects.</p>
+            </div>
+            <div class="choice-box">
+                <img src="construction workers.jpg" alt="Client-Centric Approach" class="choice-image">
+                <h3>Client-Centric Approach</h3>
+                <p>Understanding client needs and exceeding their expectations is a core principle at AK Build Design. They prioritize communication and transparency, keeping you informed and involved at every stage of the project.</p>
+            </div>
+            <div class="choice-box">
+                <img src="building.jpg" alt="Innovative Design" class="choice-image">
+                <h3>Innovative Design</h3>
+                <p>With a strong focus on innovative design, AK Build Design brings creativity and modern aesthetics to every project. Their design team is skilled in creating spaces that are not only functional but also visually appealing.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="event">
+        <h1>Meticulous Design Planning</h1>
+    </div>
+    <div class="event-content">
+        <div class="event-text">
+            <p>At AK Build & Design, meticulous planning is the cornerstone of our success. Our commitment to professionalism ensures that every project begins with a comprehensive and well-thought-out plan, tailored to meet the unique needs of our clients. Our floor plans reflect our dedication to precision and attention to detail. From initial sketches to finalized blueprints, we meticulously craft each plan to ensure functionality, efficiency, and aesthetic harmony. Our professional planning minimizes disruptions and guarantees a smooth transition from design to reality.</p>
+        </div>
+        <div class="image-item">
+            <img src="floor-plan.jpg" alt="Floor Plan">
+        </div>
+    </div>
+
+    <div class="sector">
+        <div class="sector-content">
+            <div class="sector-text">
+                <h1> Floor Plan starts at 2 per sq.feet </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-container">
+        <button class="scroll-button left">&#9664;</button>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="floor plan 1.jpeg" alt="Model 1">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 2.jpeg" alt="Model 2">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 3.jpeg" alt="Model 3">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 4.jpeg" alt="Model 4">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 5.jpeg" alt="Model 5">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 6.jpeg" alt="Model 6">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 7.jpeg" alt="Model 7">
+            </div>
+            <div class="image-item">
+                <img src="floor plan 8.jpeg" alt="Model 8">
+            </div>
+        </div>
+        <button class="scroll-button right">&#9654;</button>
+    </div>
+
+    
+    <div class="client-testimonial">
+        <h1>Client Testimonial</h1>
+        <div class="testimonial-container">
+            <img src="Customer Testimonial.png" alt="Customer Testimonial" class="testimonial-image">
+            <img src="Customer Testimonial 2.png" alt="Customer Testimonial" class="testimonial-image">
+            <img src="Customer Testimonial 3.png" alt="Customer Testimonial" class="testimonial-image">
+        </div>
+    </div>
+
+    <div class="contact-section" id="contact-section">
+        <h1>Contact Us</h1>
+        <div class="contact-content">
+            <div class="contact-image">
+                <video src="contactvideo.mp4" controls autoplay muted loop></video>
+            </div>
+                <div class="contact-form-section">
+                    <h2>Contact Form</h2>
+                    <form action="mailto:anandkarthi64@gmail.com" method="POST" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile:</label>
+                            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="plot-area">Plot Area (sq. feet):</label>
+                            <select id="plot-area" name="plot-area" required>
+                                <option value="">Please select an option</option>
+                                <option value="600-1200">600-1200</option>
+                                <option value="1200-1800">1200-1800</option>
+                                <option value="1800-2400">1800-2400</option>
+                                <option value="2400-4800">2400-4800</option>
+                                <option value="4800-more">4800 and more</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="proposal">Proposal:</label>
+                            <select id="proposal" name="proposal" required>
+                                <option value="">Please select an option</option>
+                                <option value="ground-floor">Ground Floor</option>
+                                <option value="G+1">G+1</option>
+                                <option value="G+2">G+2</option>
+                                <option value="G+3">G+3</option>
+                                <option value="G+4">G+4</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location:</label>
+                            <input type="text" id="location" name="location" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <footer>
+        <div class="footer-content">
+            <h3>AK Build & Design</h3>
+            <p>Building the future, restoring the past.</p>
+            <ul class="socials">
+                <li><a href="https://www.instagram.com/ak_design_mdu/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="mailto:anandkarthi64@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+                <li><a href="tel:+918682024444"><ion-icon name="call-outline"></ion-icon></a></li>
+            </ul>            
+            <ul class="menu">
+                <li><a href="#header-section">Home</a></li>
+                <li><a href="#who-are-we">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact-section">Contact Us</a></li>
+            </ul>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AK Build Design. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
