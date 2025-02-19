@@ -277,30 +277,32 @@
     </div>
 
     <div class="client-testimonial">
-        <h1>Client Testimonials</h1>
-        <div class="carousel">
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <div class="testimonial-container">
-                <video class="testimonial-video" controls autoplay loop muted>
-                    <source src="client-testimonial-1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video class="testimonial-video" controls autoplay loop muted>
-                    <source src="client-testimonial-2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video class="testimonial-video" controls autoplay loop muted>
-                    <source src="client-testimonial-3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    <h1>Client Testimonials</h1>
+    <div class="carousel">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="testimonial-container">
+            <video class="testimonial-video" controls autoplay loop muted>
+                <source src="client testimonial 1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video class="testimonial-video" controls autoplay loop muted>
+                <source src="client testimonial 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video class="testimonial-video" controls autoplay loop muted>
+                <source src="client testimonial 3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
+</div>
 
-    <script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
         let currentIndex = 0;
         const videos = document.querySelectorAll(".testimonial-video");
+        const container = document.querySelector(".testimonial-container");
 
         function moveSlide(step) {
             currentIndex += step;
@@ -312,10 +314,12 @@
             }
 
             // Adjust the translation to show the current video
-            document.querySelector(".testimonial-container").style.transform = `translateX(${-currentIndex * 300}px)`;
+            container.style.transform = `translateX(${-currentIndex * 300}px)`;
         }
-    </script>
 
+        moveSlide(0); // Initialize first video on page load
+    });
+</script>
 
     <div class="contact-section" id="contact-section">
         <h1>Contact Us</h1>
