@@ -11,13 +11,16 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>  
 </head>
 <body>
-    <header>
-        <div class="main">
-            <div class="background-image">
-                <video src="background.mp4" controls autoplay muted loop></video>
-            </div>
+        <header>
+        <video autoplay loop muted playsinline>
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <nav>
             <div class="logo">
                 <img src="blurywood.png" alt="AK Design and Build Logo">
+            </nav>
             </div>
             <nav>
                 <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
@@ -28,12 +31,16 @@
                 <li><a href="#contact-section">Contact Us</a></li>
             </ul>
         </div>
+        </nav>
         <script>
-            // JavaScript to toggle menu visibility
-            function toggleMenu() {
-                const navMenu = document.querySelector(".nav-menu");
-                navMenu.classList.toggle("show"); // Adds or removes the "show" class
-            }
+            document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuIcon.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+    });
+});
         </script>
         
         <div class="title" id="header-section">
