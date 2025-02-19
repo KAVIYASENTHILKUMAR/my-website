@@ -672,99 +672,65 @@ h1 {
 }
 
 /* Testimonial styles */
-.client-testimonial {
-    padding: 40px 20px;
-    text-align: center; /* Center align text */
-}
-
-.client-testimonial h1 {
-    font-size: 2em;
-    color: #444;
-    margin-bottom: 20px;
-}
-
-/* Testimonial container for videos */
-.testimonial-container {
-    display: flex;
-    justify-content: center; /* Align videos in a row */
-    align-items: center;
-    gap: 20px; /* Space between videos */
-    flex-wrap: wrap; /* Makes it responsive */
-}
-
-/* Individual testimonial video box */
-/* Testimonial Section */
+ /* Testimonial Section */
         .client-testimonial {
+            padding: 40px 20px;
             text-align: center;
-            padding: 50px;
-            background-color: #f9f9f9;
         }
 
-        /* Carousel Container */
         .carousel {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
-            max-width: 900px;
+            max-width: 90%;
             margin: auto;
+            overflow: hidden;
         }
 
-        /* Testimonial Video Container */
         .testimonial-container {
             display: flex;
-            overflow: hidden; /* Hide overflowing content */
-            width: 300px; /* Width of a single video */
+            transition: transform 0.5s ease-in-out;
+            width: 300%; /* Adjust for number of videos */
         }
 
-        /* Individual Video */
         .testimonial-video {
-            width: 300px;
-            height: auto;
+            width: 33.33%; /* Ensures three videos fit in one row */
+            flex: 0 0 auto;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.5s ease-in-out;
         }
 
         /* Navigation Buttons */
         .prev, .next {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            transition: 0.3s;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 5px;
         }
 
         .prev {
-            left: 0;
+            left: 10px;
         }
 
         .next {
-            right: 0;
+            right: 10px;
         }
 
         .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.8);
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .testimonial-container {
-                width: 100%; /* Full width for small screens */
-            }
-
             .testimonial-video {
-                width: 100%; /* Make video take full width */
+                width: 100%; /* Stack on smaller screens */
             }
 
-            .prev, .next {
-                font-size: 18px;
-                padding: 8px;
+            .testimonial-container {
+                width: 100%;
             }
         }
 
