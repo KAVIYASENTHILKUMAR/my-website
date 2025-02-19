@@ -685,8 +685,8 @@ h1 {
         }
 
         .testimonial-video {
-            width: 350px; /* Small size */
-            height: 200px; /* Maintain aspect ratio */
+            width: 400px; /* Small size */
+            height: 350px; /* Maintain aspect ratio */
             border-radius: 10px;
         }
 
