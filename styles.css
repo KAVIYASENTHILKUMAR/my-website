@@ -672,9 +672,6 @@ h1 {
 }
 
 /* Testimonial styles */
-
-/* Testimonial styles */
-
 .client-testimonial {
     padding: 40px 20px;
     text-align: center; /* Center align text */
@@ -686,13 +683,16 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Testimonial container for videos */
 .testimonial-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center; /* Align videos in a row */
     align-items: center;
-    gap: 20px; /* Space between testimonials */
+    gap: 20px; /* Space between videos */
+    flex-wrap: wrap; /* Makes it responsive */
 }
 
+/* Individual testimonial video box */
 .testimonial-box {
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -704,6 +704,14 @@ h1 {
 
 .testimonial-box:hover {
     transform: scale(1.02);
+}
+
+.testimonial-video {
+    width: 30%; /* Ensures 3 videos fit in a row */
+    max-width: 300px; /* Prevents videos from getting too large */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-box p {
@@ -719,9 +727,19 @@ h1 {
     font-weight: bold;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
     .client-testimonial h1 {
         font-size: 1.5rem;
+    }
+
+    .testimonial-container {
+        flex-direction: column; /* Stack videos in smaller screens */
+        gap: 10px;
+    }
+
+    .testimonial-video {
+        width: 90%; /* Make videos take full width */
     }
 
     .testimonial-box {
@@ -737,19 +755,6 @@ h1 {
     }
 }
 
-
-@media (max-width: 800px) {
-    .testimonial-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px; /* Adjust gap for smaller screens */
-    }
-
-    .testimonial-image {
-        width: 90%; /* Adjust width for smaller screens */
-        height: auto;
-    }
-}
 
 /* Contact Content */
 .contact-section {
@@ -767,8 +772,8 @@ h1 {
 }
 
 .contact-image video {
-    width: 140px;
-    height: 400px; /* Set the height as needed */
+    width: 200px;
+    height: 800px; /* Set the height as needed */
     object-fit: cover; /* Ensures the video covers the set height while maintaining its aspect ratio */
     object-position: bottom;
     border-radius: 10px;
