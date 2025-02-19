@@ -674,63 +674,32 @@ h1 {
 /* Testimonial styles */
  /* Testimonial Section */
         .client-testimonial {
-            padding: 40px 20px;
+            padding: 20px;
             text-align: center;
-        }
-
-        .carousel {
-            position: relative;
-            max-width: 90%;
-            margin: auto;
-            overflow: hidden;
         }
 
         .testimonial-container {
             display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 300%; /* Adjust for number of videos */
+            justify-content: center;
+            gap: 15px; /* Space between videos */
         }
 
         .testimonial-video {
-            width: 33.33%; /* Ensures three videos fit in one row */
-            flex: 0 0 auto;
+            width: 200px; /* Small size */
+            height: 120px; /* Maintain aspect ratio */
             border-radius: 10px;
         }
 
-        /* Navigation Buttons */
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 20px;
-            border-radius: 5px;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-
-        .prev:hover, .next:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
         /* Responsive */
-        @media (max-width: 768px) {
-            .testimonial-video {
-                width: 100%; /* Stack on smaller screens */
+        @media (max-width: 600px) {
+            .testimonial-container {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .testimonial-container {
-                width: 100%;
+            .testimonial-video {
+                width: 90%; /* Full width on smaller screens */
+                height: auto;
             }
         }
 
