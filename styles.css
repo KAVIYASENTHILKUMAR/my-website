@@ -719,7 +719,7 @@ h1 {
 }
 
 .contact-image video {
-    width: 400px;
+    width: 350px;
     height: 600px; /* Set the height as needed */
     object-fit: cover; /* Ensures the video covers the set height while maintaining its aspect ratio */
     object-position: bottom;
