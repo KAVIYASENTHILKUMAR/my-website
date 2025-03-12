@@ -295,8 +295,7 @@
         </div>
     </div>
 
-
-    <div class="contact-section" id="contact-section">
+<div class="contact-section" id="contact-section">
         <h1>Contact Us</h1>
         <div class="contact-content">
             <div class="contact-image">
@@ -318,31 +317,46 @@
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="plot-area">Plot Area (sq. feet):</label>
-                            <select id="plot-area" name="plot-area" required>
-                                <option value="">Please select an option</option>
-                                <option value="600-1200">600-1200</option>
-                                <option value="1200-1800">1200-1800</option>
-                                <option value="1800-2400">1800-2400</option>
-                                <option value="2400-4800">2400-4800</option>
-                                <option value="4800-more">4800 and more</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="proposal">Proposal:</label>
-                            <select id="proposal" name="proposal" required>
-                                <option value="">Please select an option</option>
-                                <option value="ground-floor">Ground Floor</option>
-                                <option value="G+1">G+1</option>
-                                <option value="G+2">G+2</option>
-                                <option value="G+3">G+3</option>
-                                <option value="G+4">G+4</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label for="location">Location:</label>
                             <input type="text" id="location" name="location" required>
                         </div>
+                         <div class="container">
+        <h2>Plot Cost Calculator</h2>
+        <label for="plotArea">Plot Area (sq. feet):</label>
+        <select id="plotArea" onchange="calculateCost()">
+            <option value="">Please select an option</option>
+            <option value="600">600-1200</option>
+            <option value="1200">1200-1800</option>
+            <option value="1800">1800-2400</option>
+            <option value="2400">2400-4800</option>
+            <option value="4800">4800 and more</option>
+        </select>
+
+        <label for="proposal">Proposal:</label>
+        <select id="proposal" onchange="calculateCost()">
+            <option value="">Please select an option</option>
+            <option value="1000">Ground Floor - ₹1000 per sq.ft</option>
+            <option value="1500">G+1 - ₹1500 per sq.ft</option>
+            <option value="2000">G+2 - ₹2000 per sq.ft</option>
+            <option value="2500">G+3 - ₹2500 per sq.ft</option>
+            <option value="3000">G+4 - ₹3000 per sq.ft</option>
+        </select>
+
+        <div class="result" id="totalCost">Total Cost: ₹0</div>
+    </div>
+
+    <script>
+        function calculateCost() {
+            let area = document.getElementById("plotArea").value;
+            let proposalRate = document.getElementById("proposal").value;
+            let totalCost = 0;
+            
+            if (area && proposalRate) {
+                totalCost = area * proposalRate;
+            }
+            document.getElementById("totalCost").textContent = "Total Cost: ₹" + totalCost.toLocaleString();
+        }
+    </script>
                         <div class="form-group">
                             <button type="submit">Submit</button>
                         </div>
@@ -351,6 +365,7 @@
             </div>
         </div>
     </div>
+                   
     
     
     
